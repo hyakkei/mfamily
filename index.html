@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <link href="common.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script src="//static.tumblr.com/4ryjdsi/N6Bnr9dhx/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+    $('a[href^="#"]').click(function(){
+      var speed = 500;
+      var href= $(this).attr("href");
+      var target = $(href == "#" || href == "" ? 'html' : href);
+      var position = target.offset().top;
+      $("html, body").animate({scrollTop:position}, speed, "swing");
+      return false;
+    });
+  });
+	</script>
+
+
+</head>
+<body>
+
+
+  <header class="header">
+    <ul class="header__menu">
+      <li class="header__menu-item"><a href="#about">about</a></li>
+      <li class="header__menu-item">info</li>
+      <li class="header__menu-item">schadule</li>
+      <li class="header__menu-item">discography</li>
+      <li class="header__menu-item">contact</li>
+    </ul>
+  </header>
+
+  <div class="wrap">
+    <article class="about" id="top">
+      <section class="logo">
+        <h1 class="logo__text glitch" data-text="MORTAL FAMILY">
+          <a href="#about">MORTAL FAMILY</a>
+        </h1>
+      </section>
+      <section class="about-description">
+        <div class="about-description__image" id="about" style="background-image:url('https://78.media.tumblr.com/28fef11baeda9bc33a967b18d1c27749/tumblr_p2wh8kEnAZ1x2nz8ro1_1280.jpg')">
+        </div>
+        <div class="about-description__text">
+          <p >説明分ですよ～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～</p>
+          <dl class="about-description__member">
+      			<dt>Drums/Vocal.</dt>
+      			<dd>Shinya</dd>
+      			<dt>Bass.</dt>
+      			<dd>Kosuke</dd>
+      			<dt>Guiter.</dt>
+      			<dd>伊藤百経</dd>
+      			<dt>Manipulator.</dt>
+      			<dd>妖精マリチェル</dd>
+      		</dl>
+        </div>
+      </section>
+
+    </article>
+    <div class="secondbox">
+    </div>
+  </div>
+
+  <div id="footer-area" style="background-image: url('https://78.media.tumblr.com/903310f7d82cf17ca88d145bef30206d/tumblr_p2wh8kEnAZ1x2nz8ro2_1280.jpg')"></div>
+  <footer id="footer">
+    <p id="top-link"><a href="#top">TOP</a></p>
+    <p id="copyright">Copyright © MORTAL FAMILY All right reserved.</p>
+  </footer>
+</body>
+</html>
