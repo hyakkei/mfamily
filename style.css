@@ -145,7 +145,9 @@ about
   position: sticky;
   /* margin-bottom: calc(100vh - 33.3vh - 18%); */
   top: 1.5vw;
-  background: rgba(0, 100, 0, 0.5);
+  background: rgba(0, 0, 0, 0);
+  /* background-color: linear-gradient(#000, rgba(0,0,0,0.9)); */
+
   overflow:hidden;
   z-index: 50;
 }
@@ -209,7 +211,7 @@ about
   text-shadow: -2px 0 red;
   top: 0;
   color: white;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.0);
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   animation: noise-anim 2s infinite linear alternate-reverse;
@@ -245,7 +247,7 @@ about
   text-shadow: 2px 0 blue;
   top: 0;
   color: white;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.0);
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   animation: noise-anim-2 3s infinite linear alternate-reverse;
@@ -279,7 +281,7 @@ about
   min-height: 50vh;
   color: #fff;
   z-index: 20;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.0);
   padding-top: 50vh;
   padding-bottom: 5vh;
 }
@@ -313,6 +315,27 @@ about
   width: auto;
 }
 
+.about__border{
+  transform: skewY(-0.1deg);
+  background: linear-gradient(#000, rgba(0,0,0,0));/*(#05FBFF, #1E00FF)*/;
+  /* margin: -50px 0 -50px calc(-( (100vw - 1280px) / 2)); */
+  margin-top: calc(100vh - 33.3vh );
+  margin-bottom: -33vh;
+  width: 100vw;
+  padding: 0 0 33.3vh;
+}
+
+.about__background {
+  background: #FFF no-repeat;
+  background-size: 100% auto;
+  height: 100vh;
+  z-index: 10;
+  margin: 0 0%;
+  background-attachment: fixed;
+  background-image: url(image/prof22.jpg);
+  background-position: center center;
+}
+
 /* -----------------------------------------------------------
 info
 ----------------------------------------------------------- */
@@ -326,7 +349,7 @@ info
 
 .info__background {
   transform: skewY(-5deg);
-  background: linear-gradient(#05FBFF, #1E00FF);
+  background: linear-gradient(#05FBFF, rgba(50,180,32,0.5));
   /* margin: -50px 0 -50px calc(-( (100vw - 1280px) / 2)); */
   margin-top: -50px;
   margin-bottom: -50px;
@@ -356,15 +379,18 @@ span{
 }
 
 .fixed {
-  height:100vh;
-  width: 100vw;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
-  background-image: url(image/middle.jpg);
+}
 
-  &.bg-middle { background-image: url(https://78.media.tumblr.com/28fef11baeda9bc33a967b18d1c27749/tumblr_p2wh8kEnAZ1x2nz8ro1_1280.jpg); }
+
+  .bg-middle {
+    height:100vh;
+    width: 100vw;
+    background-image: url(image/middle.jpg);
+  }
 }
 
 /* -----------------------------------------------------------
