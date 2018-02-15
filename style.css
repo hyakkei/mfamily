@@ -9,89 +9,58 @@
 @media screen and (min-width: 1281px) {
 }
 
-@media screen and (max-width: 600px) {
-  html {
-    font-size: 80%;
-  }
-}
-@media screen and (max-width: 1280px) and (min-width:601px) {
-  html {
-    font-size: 90%;
-  }
-}
-@media screen and (min-width: 1281px) {
-}
 
-a:link { color:#FFF; text-decoration:none }
-a:visited { color:#FFF; text-decoration:none }
-a:hover { color:#FFF; text-decoration:none }
-a:active { color:#FFF; text-decoration:none }
 
-body {
-  padding: 0;
-  background: #000;
-}
 
-@media screen and (min-width: 1281px) {
-	body{
-		text-align: center;
-	}
-}
-
-/*スクロールバー全体*/
-body::-webkit-scrollbar {
-    width: 8px;
-    opacity: 0;
-}
-
-/*スクロールバーの軌道*/
-body::-webkit-scrollbar-track {
-  border-radius: 8px;
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, .1);
-}
-
-/*スクロールバーの動く部分*/
-body::-webkit-scrollbar-thumb {
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow:0 0 0 1px rgba(200, 200, 200, .3);
-}
-
+/* -----------------------------------------------------------
+Header
+----------------------------------------------------------- */
 
 .header{
   background: #000;
   width: 100%;
   position: fixed;
   top: 0;
-  left: 0;
+
   z-index: 99;
+}
+
+.header__menu {
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-pack:justify;
+  -ms-flex-pack:justify;
+  justify-content:space-between;
+  padding: 0 0;
+  width: 100%;
 }
 
 .header__menu-item {
   display: inline-block;
   font-family: 'Maven Pro', sans-serif;
-  background: #000;
+  background: #333;
   height: 100%;
-  width: 17%;
-  margin: 0 0.9%;
-  text-align: center;
+  width: auto;
+  margin: 0 0;
+  padding: 0.2rem 0.5rem;
   color: #fff;
   z-index: 99;
 }
 
 @media screen and (max-width: 600px) {
   .header{
-    height: 3.2rem;
+    height: 2.8rem;
   }
   .header__menu-item {
     margin-top: 0.6rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 
 @media screen and (max-width: 1280px) and (min-width:601px) {
   .header{
-    height: 2.2rem;
+    height: 2.6rem;
   }
   .header__menu-item {
     margin-top: 0.3rem;
@@ -100,15 +69,22 @@ body::-webkit-scrollbar-thumb {
 }
 @media screen and (min-width: 1281px) {
   .header{
-    height: 2.4rem;
+    height: 2.6rem;
+    left: calc((100vw - 1280px) / 2 - 10px);
+    width: 1290px;
   }
   .header__menu-item {
-    width: 15%;
+    width: auto;
     margin: 0 1%;
     margin-top: 0.2rem;
     font-size: 1.8rem;
   }
 }
+
+/* -----------------------------------------------------------
+Wrap
+----------------------------------------------------------- */
+
 
 .wrap{
   position: relative;
@@ -134,6 +110,9 @@ body::-webkit-scrollbar-thumb {
 	}
 }
 
+/* -----------------------------------------------------------
+about
+----------------------------------------------------------- */
 
 .about {
   background: #000;
@@ -141,6 +120,7 @@ body::-webkit-scrollbar-thumb {
   width: auto;
   height: auto;
   padding-top: 33.3vh;
+  margin-bottom: auto;
 }
 
 @media screen and (max-width: 600px) {
@@ -276,12 +256,11 @@ body::-webkit-scrollbar-thumb {
   min-height: 100vh;
   width:auto;
   margin-top: calc(100vh - 33.3vh - 18%);
-  background-color: #333;
+  background-color: #000;
 }
 
 .about-description__image {
   position: sticky;
-  /* top: 17vw; */
   top: 17vw;
   background: #444 no-repeat;
   background-size: cover;
@@ -302,11 +281,14 @@ body::-webkit-scrollbar-thumb {
   z-index: 20;
   background-color: rgba(0, 0, 0, 0.5);
   padding-top: 50vh;
+  padding-bottom: 5vh;
 }
 
 .about-description__text p{
-  font-size: 1.6rem;
-  margin: 4% 14%;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  margin: 4rem 3rem;
+  text-justify:inter-ideograph;
 }
 
 .about-description__member {
@@ -316,19 +298,46 @@ body::-webkit-scrollbar-thumb {
 
 .about-description__member dt {
 	font-size: 1.4rem;
-  margin-bottom: 1.5%;
+  margin-bottom: 0.5rem;
 }
 
 .about-description__member dd {
-	font-size: 2.2rem;
-  margin-bottom: 5%;
+	font-size: 2rem;
+  margin-bottom: 0.7rem;
 
 }
+
+.secondbox {
+  background-color: #000;
+  padding: 5rem;
+  width: auto;
+}
+
+/* -----------------------------------------------------------
+info
+----------------------------------------------------------- */
+
 
 .info{
   width: auto;
   height: auto;
   text-align: center;
+}
+
+.info__background {
+  transform: skewY(-5deg);
+  background: linear-gradient(#05FBFF, #1E00FF);
+  /* margin: -50px 0 -50px calc(-( (100vw - 1280px) / 2)); */
+  margin-top: -50px;
+  margin-bottom: -50px;
+  width: 100vw;
+  padding: 5rem 0 100vh;
+}
+
+@media screen and (min-width: 1281px) {
+	.info__background {
+    margin-left: calc((1280px - 100vw)/2);
+  }
 }
 
 .title{
@@ -346,12 +355,21 @@ span{
   color: #678;
 }
 
-.secondbox {
-  background-color: #000;
-  padding: 100px;
-  height: 200vh;
-  width: auto;
+.fixed {
+  height:100vh;
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-image: url(image/middle.jpg);
+
+  &.bg-middle { background-image: url(https://78.media.tumblr.com/28fef11baeda9bc33a967b18d1c27749/tumblr_p2wh8kEnAZ1x2nz8ro1_1280.jpg); }
 }
+
+/* -----------------------------------------------------------
+Footer
+----------------------------------------------------------- */
 
 
 #footer-area {

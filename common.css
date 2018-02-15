@@ -86,3 +86,68 @@ padding:0;
 input, select {
 vertical-align:middle;
 }
+
+
+/* -----------------------------------------------------------
+Common
+----------------------------------------------------------- */
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+/* 10px @ 600px increasing to 20px @ 1280px */
+@media screen and (max-width: 1280px) and (min-width:601px) {
+  html {
+    font-size: calc(0.625rem + ((1vw - 6px) * 1.4706));
+    /* Where: * 1.4706 = 100 * font_Size_Difference / viewport_Width_Difference */
+  }
+}
+/* Prevent font scaling beyond this breakpoint */
+@media screen and (min-width: 1281px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+
+a:link { color:#FFF; text-decoration:none }
+a:visited { color:#FFF; text-decoration:none }
+a:hover { color:#FFF; text-decoration:none }
+a:active { color:#FFF; text-decoration:none }
+
+body {
+  padding: 0;
+  background: #000;
+}
+
+@media screen and (min-width: 1281px) {
+	body{
+		text-align: center;
+	}
+}
+
+
+/* -----------------------------------------------------------
+scroll bar
+----------------------------------------------------------- */
+
+/*スクロールバー全体*/
+body::-webkit-scrollbar {
+    width: 8px;
+    opacity: 0;
+}
+
+/*スクロールバーの軌道*/
+body::-webkit-scrollbar-track {
+  border-radius: 8px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, .1);
+}
+
+/*スクロールバーの動く部分*/
+body::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow:0 0 0 1px rgba(200, 200, 200, .3);
+}
