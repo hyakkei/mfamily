@@ -119,7 +119,7 @@ a:active { color:#FFF; text-decoration:none }
 
 body {
   padding: 0;
-  background: #000;
+  background-color: #FFF;
 }
 
 @media screen and (min-width: 1281px) {
