@@ -10,8 +10,6 @@
 }
 
 
-
-
 /* -----------------------------------------------------------
 Header
 ----------------------------------------------------------- */
@@ -125,7 +123,7 @@ about
   width: auto;
   height: auto;
   padding: 0;
-  margin-bottom: auto;
+  margin-bottom: 0;
 }
 
 .about__top {
@@ -141,7 +139,8 @@ about
   position: absolute;
   background: linear-gradient(#000, rgba(0,0,0,0));/*(#05FBFF, #1E00FF)*/;
   width: 100%;
-  padding: 0 0 33.3vh;
+  height: 25vw;
+  /* padding: 0 0 33.3vh; */
   top: 66.6vh;
   z-index: 1;
 }
@@ -278,52 +277,41 @@ about
   animation: noise-anim-2 3s infinite linear alternate-reverse;
   }
 
-
-  .testbox {
-    position: static;
-    background-color: #333;
-    padding: 5rem;
-    width: auto;
-    top:100vh;
-  }
-
-
-/* .about-description {
+.about-description {
+  background: #FFF no-repeat;
+  background-size: 95% auto;
   height: auto;
   min-height: 100vh;
-  width:auto;
-  margin-top: calc(100vh - 33.3vh - 18%);
-  background-color: #000;
-} */
+  background-attachment: fixed;
+  background-image: url(image/prof22.jpg);
+  background-position: center 50%;
+}
 
-.about-description__image {
-  position: sticky;
-  top: 17vw;
-  background: #444 no-repeat;
-  background-size: cover;
-  height: 76vw;
-  max-height: 100vh;
-  margin: 0 0%;
+@media screen and (min-width: 1281px) {
+  .about-description {
+    background-size: 90% auto;
+    background-position: center 20%;
+  }
 }
 
 .about-description__text {
   font-family: 'Maven Pro', sans-serif;
   position: sticky;
-  margin: 0 0;
+  margin-top: calc(100vh - 33.3vh - 17.3vw);
   width: 100%;
   height: auto;
   min-height: 50vh;
   color: #fff;
   z-index: 20;
-  background-color: rgba(0, 0, 0, 0.0);
+  background-color: rgba(0, 0, 0, 0.1);
   padding-top: 30vh;
   padding-bottom: 5vh;
 }
 
 
 .about-description__text p{
-  text-shadow: -1px 0 red,1px 0 blue;
-  font-size: 1.4rem;
+  text-shadow: -2px 0 red,2px 0 blue;
+  font-size: 1.3rem;
   line-height: 2rem;
   margin: 4rem 3rem;
   text-justify:inter-ideograph;
@@ -350,28 +338,6 @@ about
 
 
 
-
-
-.about-description {
-  background: #FFF no-repeat;
-  background-size: 95% auto;
-  height: auto;
-  min-height: 100vh;
-  z-index: 10;
-  margin-bottom: 3rem;
-  background-attachment: fixed;
-  background-image: url(image/prof22.jpg);
-  background-position: center 60%;
-}
-
-@media screen and (min-width: 1281px) {
-  .about-description {
-    background-size: 90% auto;
-    background-position: center 20%;
-  }
-}
-
-
 /* -----------------------------------------------------------
 info
 ----------------------------------------------------------- */
@@ -388,20 +354,15 @@ info
 }
 
 .info__background {
-  transform: skewY(-5deg);
+  position: relative;
+  /* transform: skewY(-5deg); */
   background: linear-gradient(#05FBFF, #1E00FF);
   /* margin: -50px 0 -50px calc(-( (100vw - 1280px) / 2)); */
-  margin-top: calc(-50px - 5rem);
-  margin-bottom: -50px;
+  /* margin-top: -5rem; */
+  margin-bottom: 0;
   width: 100vw;
   padding: 5rem 0 100vh;
-  z-index: 1;
-}
-
-@media screen and (min-width: 1281px) {
-	.info__background {
-    margin-left: calc((1280px - 100vw)/2);
-  }
+  z-index: 2;
 }
 
 .title{
@@ -419,7 +380,11 @@ span{
   color: #678;
 }
 
-.fixed {
+/* -----------------------------------------------------------
+Schadule
+----------------------------------------------------------- */
+
+.fixed-background {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -427,11 +392,28 @@ span{
 }
 
 
-  .bg-middle {
+  .schadule {
     height:100vh;
     width: 100vw;
-    background-image: url(image/middle.jpg);
+    background-image: url(image/face.jpg);
   }
+
+/* -----------------------------------------------------------
+Discography
+----------------------------------------------------------- */
+.discography {
+  height:100vh;
+  width: 100vw;
+  background: linear-gradient(#B4A899, #F8F7EC);
+}
+
+/* -----------------------------------------------------------
+Contact
+----------------------------------------------------------- */
+.contact {
+  height:100vh;
+  width: 100vw;
+  background-image: url(image/finger.jpg);
 }
 
 /* -----------------------------------------------------------
@@ -441,7 +423,7 @@ Footer
 
 #footer-area {
   position: fixed;
-  height: 440px;
+  height: 3rem;
   bottom: 0;
   background: #FFF bottom center no-repeat;
   background-size: cover;
@@ -475,19 +457,20 @@ Footer
 #footer {
   font-family: 'Maven Pro', sans-serif;
   position: relative;
-  height: 440px;
-  color: #FFF;
+  height: 2rem;
+  color: #000;
   padding-top: 1px;
   box-sizing: border-box;
 	text-align: center;
 }
 
 #top-link {
-  margin: 10%;
+  margin: 0;
 	text-align: center;
+  color: #000 !important;
 }
 #copyright {
-  margin-bottom: 10%;
+  margin-bottom: 0;
   left: auto;
 	text-align: center;
 }
