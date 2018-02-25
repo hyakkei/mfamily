@@ -120,9 +120,9 @@ a:active { color:#FFF; text-decoration:none }
 body {
   padding: 0;
   background-color: #FFF;
-  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, '游ゴシック',
-	'Yu Gothic', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ',
-	 arial, Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, '貂ｸ繧ｴ繧ｷ繝�け',
+	'Yu Gothic', '繝偵Λ繧ｮ繝手ｧ偵ざ ProN W3', 'Hiragino Kaku Gothic ProN', '繝｡繧､繝ｪ繧ｪ',
+	 arial, Meiryo, '�ｭ�ｳ �ｰ繧ｴ繧ｷ繝�け', 'MS PGothic', sans-serif;
 }
 
 @media screen and (min-width: 1281px) {
@@ -131,26 +131,72 @@ body {
 	}
 }
 
+/* .fixed-background {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+} */
+
+.fixed-background::before{
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10% 0;
+  content: "";
+  z-index: -1;
+}
+
+.effect-move{
+	-moz-transition: 1.0s;
+	-webkit-transition: 1.0s;
+	-o-transition: 1.0s;
+	-ms-transition: 1.0s;
+	transition: 1.0s;
+}
 
 /* -----------------------------------------------------------
 scroll bar
 ----------------------------------------------------------- */
-
-/*スクロールバー全体*/
 body::-webkit-scrollbar {
     width: 8px;
     opacity: 0;
 }
 
-/*スクロールバーの軌道*/
 body::-webkit-scrollbar-track {
   border-radius: 8px;
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, .1);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, .2);
 }
 
-/*スクロールバーの動く部分*/
 body::-webkit-scrollbar-thumb {
   background-color: #fff;
   border-radius: 8px;
-  box-shadow:0 0 0 1px rgba(200, 200, 200, .3);
+  box-shadow:0 0 0 1px rgba(200, 200, 200, .4);
+}
+
+
+/* -----------------------------------------------------------
+Tumblr
+----------------------------------------------------------- */
+iframe.iframe-controls--phone-mobile {
+	display: none;
+}
+
+iframe.tmblr-iframe--app-cta-button.tmblr-iframe--loaded {
+	display: none;
+}
+
+iframe.tmblr-iframe--unified-controls{
+	display: none;
+}
+iframe.iframe-controls--phone-mobile {
+	display: none;
 }

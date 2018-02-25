@@ -7,7 +7,11 @@
   <link href="style.css" rel="stylesheet">
   <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
   <!-- <script src="//static.tumblr.com/4ryjdsi/N6Bnr9dhx/jquery-1.11.3.min.js"></script> -->
+  <script type="text/javascript" src="//app.lisket.jp/bundles/lisketformmaker/js/form.js" charset="utf-8"></script>
+  <link rel="stylesheet" type="text/css" href="//app.lisket.jp/bundles/lisketformmaker/css/form.css" />
+
   <script type="text/javascript">
+
   $(function(){
     $('a[href^="#"]').click(function(){
       var speed = 500;
@@ -18,6 +22,37 @@
       return false;
     });
   });
+
+  var beforeBg = '';
+  $(window).on('load scroll touchmove', function() {
+      $scrollTop = $(window).scrollTop();
+      // 画像を切り替える位置
+      $changePointA = $('.info').offset().top;
+      $changePointB = $('.discography').offset().top;
+      if($scrollTop < $changePointA){
+        // 同じ背景画像への切替を行わないように判定
+        if(beforeBg !== 'bg-about'){
+          // 新しい画像へ切替
+          $('.about-description').removeClass('bg-schadule');
+          $('.about-description').addClass('bg-about');
+          beforeBg = 'bg-about';
+        }
+      } else if($scrollTop > $changePointA && $scrollTop < $changePointB ) {
+        if(beforeBg !== 'bg-schadule'){
+          $('.about-description').removeClass('bg-about');
+          $('.about-description').removeClass('bg-contact');
+          $('.about-description').addClass('bg-schadule');
+          beforeBg = 'bg-schadule';
+        }
+      } else {
+        if(beforeBg !== 'bg-contact'){
+          $('.about-description').removeClass('bg-schadule');
+          $('.about-description').addClass('bg-contact');
+          beforeBg = 'bg-contact';
+        }
+      }
+  });
+
 	</script>
 
 
@@ -26,13 +61,15 @@
 
 
   <header class="header">
-    <ul class="header__menu">
-      <li class="header__menu-item"><a href="#about">about</a></li>
-      <li class="header__menu-item"><a href="#info">info</a></li>
-      <li class="header__menu-item"><a href="#schadule">schadule</a></li>
-      <li class="header__menu-item"><a href="#discography">discography</a></li>
-      <li class="header__menu-item"><a href="#contact">contact</a></li>
-    </ul>
+    <dev class="wrap">
+      <ul class="header__menu">
+        <li class="header__menu-item"><a href="#about">about</a></li>
+        <li class="header__menu-item"><a href="#info">info</a></li>
+        <li class="header__menu-item"><a href="#schadule">schadule</a></li>
+        <li class="header__menu-item"><a href="#discography">discography</a></li>
+        <li class="header__menu-item"><a href="#contact">contact</a></li>
+      </ul>
+    </dev>
   </header>
 
 
@@ -45,7 +82,7 @@
         </section>
 
 
-        <section class="about-description" id="about">
+        <section class="about-description fixed-background" id="about">
           <div class="about-description__text" id="about" >
             <p >説明分ですよ～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～
               説明分ですよ～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～
@@ -87,12 +124,51 @@
     </article>
 
     <article class="schadule fixed-background" id="schadule">
+      <h2 class="title">SCHADULE</h2>
+      <div class="wrap">
+       <ul class="schadule__list">
+         {block:Posts}
+           <li class="{TagsAsClasses} effect-move">
+           {block:Text}
+               {block:Title}<p class="live-title">{Title}</p>{/block:Title}
+               {block:Body}
+                 {Body}
+               {/block:Body}
+           {/block:Text}
+           </li>
+         {/block:Posts}
+       </ul>
+      <div class="wrap">
     </article>
 
     <article class="discography" id="discography">
+      <h2 class="title">DISCOGRAPHY</h2>
+      <div class="wrap">
+
+      </div>
     </article>
 
     <article class="contact fixed-background" id="contact">
+      <h2 class="title">CONTACT</h2>
+      <div class="wrap">
+        <form class="lisket-form-maker-form" action="//app.lisket.jp/form_maker/message/11577" method="post">
+      		<dl class="mailform effect-move">
+      			<dt><label for="data_name">NAME</label></dt>
+      				<dd><input type="text" name="data[name]" id="data_name" placeholder="Please Enter Your Name" required></dd>
+      			<dt><label for="data_mail">E-MAIL ADDRESS</label></dt>
+      				<dd><input type="email" name="data[mail]" id="data_mail" placeholder="Please Enter Your E-mail Address" required></dd>
+      			<dt><label for="data_field_2">MESSAGE</label></dt>
+      				<dd><textarea name="data[field_2]" id="data_field_2" placeholder="Please Enter Your Message" required></textarea></dd>
+            <dt style="display: none"></dt>
+      				<dd style="display: none"><input type="hidden" id="data_verification_code" name="data[verification_code]" value="ebf103da9101c532122942e326df9debd3575684" /></dd>
+      		</dl>
+      		<p class="send-btn effect-move">
+            <input type="submit" class="button" value="SEND">
+          </p>
+    		</form>
+
+
+      </div>
     </article>
 
 
