@@ -60,7 +60,7 @@ Header
   position: absolute;
 }
 
-.header__menu {
+.header-menu {
   display:-webkit-box;
   display:-ms-flexbox;
   display:flex;
@@ -71,7 +71,7 @@ Header
   width: auto;
 }
 
-.header__menu-item {
+.header-menu__item {
   display: inline-block;
   font-family: 'Maven Pro', sans-serif;
   height: 100%;
@@ -82,7 +82,7 @@ Header
   z-index: 99;
 }
 
-.header__menu-item:hover {
+.header-menu__item:hover {
   background: rgba(2,2,2,0.8);
   border-radius: 0.8rem;
   -webkit-transition: all 0.8s ease;
@@ -95,7 +95,7 @@ Header
   .header{
     height: 2.8rem;
   }
-  .header__menu-item {
+  .header-menu__item {
     margin-top: 0.6rem;
     font-size: 1.5rem;
   }
@@ -105,7 +105,7 @@ Header
   .header{
     height: 2.6rem;
   }
-  .header__menu-item {
+  .header-menu__item {
     margin-top: 0.3rem;
     font-size: 1.5rem;
   }
@@ -116,7 +116,7 @@ Header
     /* left: calc((100vw - 1280px) / 2 );
     width: 1280px; */
   }
-  .header__menu-item {
+  .header-menu__item {
     width: auto;
     margin: 0 1%;
     margin-top: 0.2rem;
@@ -129,7 +129,7 @@ Header
 about
 ----------------------------------------------------------- */
 
-.about {
+.about-area {
   /* background: #fff; */
   position: relative;
   width: auto;
@@ -138,7 +138,7 @@ about
   margin-bottom: 0;
 }
 
-.about__top {
+.about-area__top {
   position: absolute;
   top:-33.3vh;
   width: 100%;
@@ -147,7 +147,7 @@ about
   z-index: 1;
 }
 
-.about__border{
+.about-area__border{
   position: absolute;
   background: linear-gradient(#000, rgba(0,0,0,0));/*(#05FBFF, #1E00FF)*/;
   width: 100%;
@@ -158,17 +158,17 @@ about
 }
 
 @media screen and (max-width: 600px) {
-  .about {
+  .about-area {
     font-size: 100vw;
   }
 }
 @media screen and (max-width: 1280px) and (min-width:601px) {
-  .about {
+  .about-area {
     font-size: 100vw;
   }
 }
 @media screen and (min-width: 1281px) {
-  .about {
+  .about-area {
     font-size: 1280px;
   }
 }
@@ -365,13 +365,13 @@ about
 /* -----------------------------------------------------------
 info
 ----------------------------------------------------------- */
-.info{
+.info-area{
   width: auto;
   height: auto;
   text-align: center;
 }
 
-.info__background {
+.info-area__background {
   position: relative;
   /* transform: skewY(-5deg); */
   background: linear-gradient(#05FBFF, #1E00FF);
@@ -400,10 +400,108 @@ span{
 }
 
 /* -----------------------------------------------------------
+Posts-list
+----------------------------------------------------------- */
+
+.posts-list {
+  width: 98%;
+  display: -webkit-flex;
+  -webkit-flex-flow: row wrap;
+  -webkit-justify-content: space-between;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 0 1%;
+  margin-bottom: 2rem;
+  list-style-type: none;
+}
+
+.posts-list > li {
+  position: relative;
+  width: 46%;
+  padding: 1%;
+  margin: 1%;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  display: none;
+}
+
+.posts-list .posts-list__date {
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+
+.posts-list .posts-list__title {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.posts-list ul {
+  margin-bottom: 1rem;
+  list-style-type: none;
+}
+
+.posts-list p {
+  font-size: .8rem;
+}
+
+.posts-list .posts-list__txt {
+  width: 50%;
+}
+
+.posts-list .posts-list__img {
+  width: 50%;
+}
+
+.posts-list__img img{
+  width: 100%;
+}
+
+.inner {
+  height: auto;
+  width: auto;
+}
+
+.clearfix::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.posts-list__tags{
+  position: absolute;
+  bottom: 0;
+  text-align: left;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .posts-list > li {
+    width: 96%;
+  }
+
+  .posts-list .posts-list__date,
+  .posts-list .posts-list__title {
+    text-align: center;
+  }
+
+  .posts-list .posts-list__txt {
+    float: none;
+    width: 100%;
+    font-size: 1.2rem;
+  }
+
+  .posts-list p {
+    font-size: 1rem;
+  }
+}
+
+
+/* -----------------------------------------------------------
 Schadule
 ----------------------------------------------------------- */
 
-  .schadule {
+  .schadule-area {
     height: auto;
     min-height: 100vh;
     width: 100%;
@@ -411,99 +509,33 @@ Schadule
     padding-top: 7rem;
   }
 
-  .schadule > .title {
+  .schadule-area > .title {
     text-shadow: 0 0 0.5rem #FFF;
   }
 
-  .schadule__list {
-  	width: 98%;
-  	display: -webkit-flex;
-  	-webkit-flex-flow: row wrap;
-  	-webkit-justify-content: space-between;
-  	display: flex;
-  	flex-flow: row wrap;
-  	justify-content: space-between;
-  	padding: 0 1%;
-  	margin-bottom: 2rem;
-  	list-style-type: none;
-  	color: #009ea9;
-  }
-
-  .schadule__list > li {
-  	width: 46%;
-  	padding: 1%;
-  	margin: 1%;
-  	margin-bottom: 2rem;
-  	overflow: hidden;
-    display: none;
-    background-color: rgba(255, 255, 255, 0.6);
-  }
-
-  .schadule__list > .live {
+  .posts-list_tags_schadule > .schadule {
       display: inline;
   }
 
-  .schadule__list .live-date {
-  	color: #fff;
-  	font-size: 1.4rem;
-  	line-height: 1.4;
+  .posts-list.posts-list_tags_schadule {
+    color: #009ea9;
   }
 
-  .schadule__list .live-title {
-  	color: #d20661;
-  	font-size: 1.4rem;
-  	margin-bottom: 1rem;
+  .posts-list_tags_schadule > li {
+    background-color: rgba(255, 255, 255, 0.6);
   }
 
-  .schadule__list {
-  	color: #999;
+  .posts-list_tags_schadule .posts-list__title {
+    color: #d20661;
   }
 
-  .schadule__list ul {
-  	margin-bottom: 1rem;
-  	list-style-type: none;
-  }
-
-  .schadule__list p {
-  	font-size: .8rem;
-  }
-
-  .schadule__list .live-txt {
-  	float: left;
-  	width: 50%;
+  .posts-list_tags_schadule .posts-list__txt {
     color: #dc2c32;
   }
 
-  .schadule__list .live-flyer {
-  	float: right;
-  	width: 50%;
-  	background: #000;
-  }
-
-  .live-flyer img{
-  	width: 100%;
-  }
-
-  @media only screen and (max-width: 600px) {
-
-  	.schadule__list > li {
-  		width: 96%;
-  	}
-
-  	.schadule__list .live-date,
-  	.schadule__list .live-title {
-  		text-align: center;
-  	}
-
-  	.schadule__list .live-txt {
-  		float: none;
-  		width: 100%;
-      font-size: 1.2rem;
-  	}
-
-    .schadule__list p {
-    	font-size: 1rem;
-    }
+  .posts-list_tags_schadule .posts-list__img {
+    float: right;
+    background: #000;
   }
 
 
@@ -511,7 +543,7 @@ Schadule
 /* -----------------------------------------------------------
 Discography
 ----------------------------------------------------------- */
-.discography {
+.discography-area {
   height: auto;
   min-height: 100vh;
   width: 100%;
@@ -520,10 +552,91 @@ Discography
   text-align: center;
 }
 
+.posts-list_tags_discography > li {
+  width: 90%;
+  margin: auto;
+}
+
+.posts-list_tags_discography > .discography {
+    display: block;
+}
+
+.posts-list.posts-list_tags_discography {
+  color: #009ea9;
+}
+
+.posts-list_tags_discography .posts-list__title {
+  font-size: 3rem;
+  color: #d20661;
+}
+
+.posts-list_tags_discography .posts-list__txt {
+  width: unset;
+  text-align: left;
+  color: #dc2c32;
+}
+
+.posts-list_tags_discography li {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+.posts-list_tags_discography p {
+  font-size: 1.4rem;
+  margin: 0.6rem 0;
+}
+
+.posts-list_tags_discography .posts-list__img {
+  float: left;
+  width: 65%;
+  background: rgba(0, 0, 0, 0);
+}
+
+@media only screen and (max-width: 600px) {
+
+  .posts-list_tags_discography {
+    -webkit-justify-content: center;
+    justify-content: center;
+  }
+
+  .posts-list_tags_discography .posts-list__title {
+    text-align: center;
+  }
+
+  .posts-list_tags_discography .posts-list__img {
+    float: none;
+    width: 100%;
+    background: rgba(0, 0, 0, 0);
+  }
+
+  .posts-list_tags_discography .posts-list__txt {
+    float: none;
+    width: 100%;
+    font-size: 1.2rem;
+  }
+
+  .posts-list_tags_discography p {
+    font-size: 1.4rem;
+  }
+
+  .song-list {
+    width: 50%;
+    float: left;
+  }
+
+  .disc-info {
+    float: right;
+    width: 50%;
+  }
+}
+
+
+
+
 /* -----------------------------------------------------------
 Contact
 ----------------------------------------------------------- */
-.contact {
+.contact-area {
   height: auto;
   min-height: 100vh;
   width: 100%;
@@ -531,7 +644,7 @@ Contact
   text-align: center;
 }
 
-.contact > .title {
+.contact-area > .title {
   text-shadow: 0 0 0.5rem #FFF,0 0 0.5rem #FFF,0 0 0.5rem #FFF;
 }
 

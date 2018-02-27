@@ -3,10 +3,10 @@
 <head>
 
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link href="common.css" rel="stylesheet">
-  <link href="style.css" rel="stylesheet">
-  <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
-  <!-- <script src="//static.tumblr.com/4ryjdsi/N6Bnr9dhx/jquery-1.11.3.min.js"></script> -->
+  <link href="https://static.tumblr.com/zueaxxn/HAUp4tirg/common.css" rel="stylesheet">
+  <link href="https://static.tumblr.com/zueaxxn/XnAp4tmen/style.css" rel="stylesheet">
+  <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.0.min.js"></script> -->
+  <script src="//static.tumblr.com/4ryjdsi/N6Bnr9dhx/jquery-1.11.3.min.js"></script>
   <script type="text/javascript" src="//app.lisket.jp/bundles/lisketformmaker/js/form.js" charset="utf-8"></script>
   <link rel="stylesheet" type="text/css" href="//app.lisket.jp/bundles/lisketformmaker/css/form.css" />
 
@@ -28,7 +28,7 @@
       $scrollTop = $(window).scrollTop();
       // 画像を切り替える位置
       $changePointA = $('.info-area').offset().top;
-      $changePointB = $('.discography').offset().top;
+      $changePointB = $('.discography-area').offset().top;
       if($scrollTop < $changePointA){
         // 同じ背景画像への切替を行わないように判定
         if(beforeBg !== 'bg-about'){
@@ -55,6 +55,22 @@
 
 	</script>
 
+<style type="text/css">
+<!--
+    .about-description.fixed-background.bg-about:before {
+      background-image: url(https://68.media.tumblr.com/bc7f1f13b4c1fa2efd4307d1b1701926/tumblr_p4nwdj34ou1x2nz8ro1_1280.jpg);
+    }
+
+    .about-description.fixed-background.bg-schadule:before {
+      background-image: url(https://78.media.tumblr.com/a79e12b29d0a085a97d621c196e0fabf/tumblr_p4nw7t47Tw1x2nz8ro1_1280.jpg);
+    }
+
+    .about-description.fixed-background.bg-contact:before {
+      background-image: url(https://78.media.tumblr.com/b43dd06e0600cffc3d2e3d4355b9eb2a/tumblr_p4nw7t47Tw1x2nz8ro2_1280.jpg);
+    }
+
+-->
+</style>
 
 </head>
 <body>
@@ -128,13 +144,15 @@
             <li class="{TagsAsClasses} effect-move">
               {block:Text}
                 {block:Title}<p class="posts-list__title">{Title}</p>{/block:Title}
-                <div class="inner">
+                <div class="inner clearfix">
                   {block:Body}{Body}{/block:Body}
                 </div>
               {/block:Text}
-              {block:HasTags}
-                {block:Tags}<p class="posts-list__tags">#{Tag}</p>{/block:Tags}
-              {/block:HasTags}
+              <p class="posts-list__tags">
+                {block:HasTags}
+                  {block:Tags} #{Tag}{/block:Tags}
+                {/block:HasTags}
+              </p>
            </li>
           {/block:Posts}
         </ul>
@@ -147,8 +165,8 @@
         <ul class="posts-list posts-list_tags_discography">
           <li class="discography effect-move">
             <div class="posts-list__img">
-              <a href="https://78.media.tumblr.com/5e92b7918a3ee04a19441583b7b47862/tumblr_inline_p4tat3ichJ1vxelft_540.jpg">
-                <img src="https://78.media.tumblr.com/5e92b7918a3ee04a19441583b7b47862/tumblr_inline_p4tat3ichJ1vxelft_540.jpg" alt="HAMON" >
+              <a href="https://68.media.tumblr.com/5e92b7918a3ee04a19441583b7b47862/tumblr_p4tkotXmKM1x2nz8ro1_1280.jpg">
+                <img src="https://68.media.tumblr.com/5e92b7918a3ee04a19441583b7b47862/tumblr_p4tkotXmKM1x2nz8ro1_1280.jpg" alt="HAMON" >
               </a>
             </div>
             <div class="posts-list__txt">
@@ -174,7 +192,32 @@
 
     </article>
 
-    <!-- <article class="contact-area fixed-background" id="contact">
+<!--
+    <article class="discography-area" id="discography">
+      <h2 class="title">DISCOGRAPHY</h2>
+      <div class="wrap">
+        <ul class="posts-list posts-list_tags_discography">
+          {block:Posts}
+            <li class="{TagsAsClasses} effect-move">
+              {block:Text}
+                {block:Title}<p class="posts-list__title">{Title}</p>{/block:Title}
+                <div class="inner clearfix">
+                  {block:Body}{Body}{/block:Body}
+                </div>
+              {/block:Text}
+              <p class="posts-list__tags">
+                {block:HasTags}
+                  {block:Tags} #{Tag}{/block:Tags}
+                {/block:HasTags}
+              </p>
+           </li>
+          {/block:Posts}
+        </ul>
+      </div>
+    </article>
+-->
+
+    <article class="contact-area fixed-background" id="contact">
       <h2 class="title">CONTACT</h2>
       <div class="wrap">
         <form class="contact-form" action="//app.lisket.jp/form_maker/message/11577" method="post">
@@ -191,9 +234,9 @@
       		<p class="send-btn effect-move">
             <input type="submit" class="button" value="SEND">
           </p>
-    		</form>
+    	</form>
       </div>
-    </article> -->
+    </article>
 
 
   <!-- <div id="footer-area" style="background-image: url('https://78.media.tumblr.com/903310f7d82cf17ca88d145bef30206d/tumblr_p2wh8kEnAZ1x2nz8ro2_1280.jpg')"></div> -->
