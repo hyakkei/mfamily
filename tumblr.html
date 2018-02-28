@@ -3,8 +3,8 @@
 <head>
 
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link href="https://static.tumblr.com/zueaxxn/HAUp4tirg/common.css" rel="stylesheet">
-  <link href="https://static.tumblr.com/zueaxxn/XnAp4tmen/style.css" rel="stylesheet">
+  <link href="https://static.tumblr.com/zueaxxn/xNTp4v7ph/common.css" rel="stylesheet">
+  <link href="https://static.tumblr.com/zueaxxn/nw8p4vgza/style.css" rel="stylesheet">
   <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.0.min.js"></script> -->
   <script src="//static.tumblr.com/4ryjdsi/N6Bnr9dhx/jquery-1.11.3.min.js"></script>
   <script type="text/javascript" src="//app.lisket.jp/bundles/lisketformmaker/js/form.js" charset="utf-8"></script>
@@ -73,10 +73,10 @@
 </style>
 
 </head>
-<body>
+<body id="top">
 
 
-  <header class="header">
+  <header class="header" >
     <dev class="wrap">
       <ul class="header-menu">
         <li class="header-menu__item"><a href="#about">about</a></li>
@@ -88,8 +88,8 @@
     </dev>
   </header>
 
-
-    <article class="about-area" id="top">
+  <div></div>
+    <article class="about-area">
       <div class="wrap">
         <section class="logo">
           <h1 class="logo__text glitch" data-text="MORTAL FAMILY">
@@ -99,9 +99,10 @@
 
         <section class="about-description fixed-background" id="about">
           <div class="about-description__text" id="about" >
-            <p >説明分ですよ～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～
-              説明分ですよ～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～
-              説明分ですよ～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～</p>
+            <p >Scrap and build and more scrap.<br>
+                Disturbing, but cozy iteration and improvisation.<br>
+                Nothing is permanent.<br>
+                Nothing is same moment.</p>
             <dl class="about-description__member">
               <dt>Drums/Vocal.</dt>
               <dd>Shinya</dd>
@@ -121,19 +122,20 @@
     </article>
 
     <article class="info-area" id="info">
-      <div class="info-area__background">
         <h2 class="title">INFO</h2>
-        <ul class="info-area__list">
-          <li>
-            <div class=info-area__data>
-              <time>2018/2/4</time>
-              <span>#info</span>
-              <span>#XXXX</span>
-            </div>
-            <span>hogehogehogehogehogehogehoge</span>
-          </li>
+        <ul class="posts-list posts-list_tags_info">
+          {block:Posts}
+            <li class="{TagsAsClasses} effect-move">
+              <a href="{Permalink}">
+                <div class="info-date-tags">
+                  {block:Date}<time class="posts-list__date">{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}</time>{/block:Date}
+                  {block:HasTags}{block:Tags}<span class="posts-list__tags">#{Tag}</span>{/block:Tags}{/block:HasTags}
+                </div>
+                {block:Text}{block:Title}<p class="posts-list__title">{Title}</p>{/block:Title}{/block:Text}
+              </a>
+            </li>
+          {/block:Posts}
         </ul>
-      </div>
     </article>
 
     <article class="schadule-area fixed-background" id="schadule">
@@ -238,11 +240,9 @@
       </div>
     </article>
 
-
-  <!-- <div id="footer-area" style="background-image: url('https://78.media.tumblr.com/903310f7d82cf17ca88d145bef30206d/tumblr_p2wh8kEnAZ1x2nz8ro2_1280.jpg')"></div> -->
-  <footer id="footer">
-    <p id="top-link"><a href="#top">TOP</a></p>
-    <p id="copyright">Copyright © MORTAL FAMILY All right reserved.</p>
+  <footer class="footer">
+    <a href="#top"><img src="https://static.tumblr.com/zueaxxn/RNNp4vf1x/arrowtop.png" class="top-link"></a>
+    <p class="copyright">Copyright © MORTAL FAMILY All right reserved.</p>
   </footer>
 </body>
 </html>

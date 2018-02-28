@@ -5,6 +5,9 @@ Last Updated: 2010-09-17
 Author: Richard Clark - http://richclarkdesign.com
 Twitter: @rich_clark
 */
+
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Raleway:400,600i');
+
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -89,7 +92,7 @@ vertical-align:middle;
 
 
 /* -----------------------------------------------------------
-Common
+@Common
 ----------------------------------------------------------- */
 @media screen and (max-width: 600px) {
   html {
@@ -120,9 +123,9 @@ a:active { color:#FFF; text-decoration:none }
 body {
   padding: 0;
   background-color: #FFF;
-  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, '貂ｸ繧ｴ繧ｷ繝�け',
-	'Yu Gothic', '繝偵Λ繧ｮ繝手ｧ偵ざ ProN W3', 'Hiragino Kaku Gothic ProN', '繝｡繧､繝ｪ繧ｪ',
-	 arial, Meiryo, '�ｭ�ｳ �ｰ繧ｴ繧ｷ繝�け', 'MS PGothic', sans-serif;
+  font-family: Josefin Sans, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, '游ゴシック',
+	'Yu Gothic', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ',
+	 arial, Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
 }
 
 @media screen and (min-width: 1281px) {
@@ -164,7 +167,7 @@ body {
 }
 
 /* -----------------------------------------------------------
-scroll bar
+@Scroll bar
 ----------------------------------------------------------- */
 body::-webkit-scrollbar {
     width: 8px;
@@ -184,7 +187,7 @@ body::-webkit-scrollbar-thumb {
 
 
 /* -----------------------------------------------------------
-Tumblr
+@Tumblr
 ----------------------------------------------------------- */
 iframe.iframe-controls--phone-mobile {
 	display: none;

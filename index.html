@@ -107,15 +107,26 @@
     <article class="info-area" id="info">
       <div class="info-area__background">
         <h2 class="title">INFO</h2>
-        <ul class="info-area__list">
-          <li>
+        <ul class="posts-list posts-list_tags_info">
+          {block:Posts}
+            <li class="{TagsAsClasses} effect-move">
+              <a href="{Permalink}">
+                <div class="info-date-tags">
+                  {block:Date}<time class="posts-list__date">{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}</time>{/block:Date}
+                  {block:HasTags}{block:Tags}<span class="posts-list__tags">#{Tag}</span>{/block:Tags}{/block:HasTags}
+                </div>
+                {block:Text}{block:Title}<p class="posts-list__title">{Title}</p>{/block:Title}{/block:Text}
+              </a>
+            </li>
+          {/block:Posts}
+          <!-- <li>
             <div class=info-area__data>
               <time>2018/2/4</time>
               <span>#info</span>
               <span>#XXXX</span>
             </div>
             <span>hogehogehogehogehogehogehoge</span>
-          </li>
+          </li> -->
         </ul>
       </div>
     </article>
@@ -196,10 +207,9 @@
     </article> -->
 
 
-  <!-- <div id="footer-area" style="background-image: url('https://78.media.tumblr.com/903310f7d82cf17ca88d145bef30206d/tumblr_p2wh8kEnAZ1x2nz8ro2_1280.jpg')"></div> -->
-  <footer id="footer">
-    <p id="top-link"><a href="#top">TOP</a></p>
-    <p id="copyright">Copyright © MORTAL FAMILY All right reserved.</p>
+  <footer class="footer">
+    <a href="#top"><img src="https://static.tumblr.com/zueaxxn/RNNp4vf1x/arrowtop.png" class="top-link"></a>
+    <p class="copyright">Copyright © MORTAL FAMILY All right reserved.</p>
   </footer>
 </body>
 </html>
