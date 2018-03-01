@@ -1,67 +1,71 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link href="https://static.tumblr.com/zueaxxn/xNTp4v7ph/common.css" rel="stylesheet">
-  <link href="https://static.tumblr.com/zueaxxn/nw8p4vgza/style.css" rel="stylesheet">
+  <link href="https://static.tumblr.com/zueaxxn/Fh7p4x9i5/common.css" rel="stylesheet">
+  <link href="https://static.tumblr.com/zueaxxn/hF0p4x9qy/style.css" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://static.tumblr.com/zueaxxn/CKcp4x1gn/lightbox.css">
   <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.0.min.js"></script> -->
   <script src="//static.tumblr.com/4ryjdsi/N6Bnr9dhx/jquery-1.11.3.min.js"></script>
+  <script src="https://static.tumblr.com/zueaxxn/pugp4x1hs/lightbox.js" type="text/javascript"></script>
   <script type="text/javascript" src="//app.lisket.jp/bundles/lisketformmaker/js/form.js" charset="utf-8"></script>
   <link rel="stylesheet" type="text/css" href="//app.lisket.jp/bundles/lisketformmaker/css/form.css" />
 
   <script type="text/javascript">
-
-  $(function(){
-    $('a[href^="#"]').click(function(){
-      var speed = 500;
-      var href= $(this).attr("href");
-      var target = $(href == "#" || href == "" ? 'html' : href);
-      var position = target.offset().top;
-      $("html, body").animate({scrollTop:position}, speed, "swing");
-      return false;
+    $(function() {
+      $('a[href^="#"]').click(function() {
+        var speed = 500;
+        var href = $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top;
+        $("html, body").animate({
+          scrollTop: position
+        }, speed, "swing");
+        return false;
+      });
     });
-  });
 
-  var beforeBg = '';
-  $(window).on('load scroll touchmove', function() {
+    var beforeBg = '';
+    $(window).on('load scroll touchmove', function() {
       $scrollTop = $(window).scrollTop();
       // 画像を切り替える位置
       $changePointA = $('.info-area').offset().top;
       $changePointB = $('.discography-area').offset().top;
-      if($scrollTop < $changePointA){
+      if ($scrollTop < $changePointA) {
         // 同じ背景画像への切替を行わないように判定
-        if(beforeBg !== 'bg-about'){
+        if (beforeBg !== 'bg-about') {
           // 新しい画像へ切替
-          $('.about-description').removeClass('bg-schadule');
+          $('.about-description').removeClass('bg-schedule');
           $('.about-description').addClass('bg-about');
           beforeBg = 'bg-about';
         }
-      } else if($scrollTop > $changePointA && $scrollTop < $changePointB ) {
-        if(beforeBg !== 'bg-schadule'){
+      } else if ($scrollTop > $changePointA && $scrollTop < $changePointB) {
+        if (beforeBg !== 'bg-schedule') {
           $('.about-description').removeClass('bg-about');
           $('.about-description').removeClass('bg-contact');
-          $('.about-description').addClass('bg-schadule');
-          beforeBg = 'bg-schadule';
+          $('.about-description').addClass('bg-schedule');
+          beforeBg = 'bg-schedule';
         }
       } else {
-        if(beforeBg !== 'bg-contact'){
-          $('.about-description').removeClass('bg-schadule');
+        if (beforeBg !== 'bg-contact') {
+          $('.about-description').removeClass('bg-schedule');
           $('.about-description').addClass('bg-contact');
           beforeBg = 'bg-contact';
         }
       }
-  });
+    });
+  </script>
 
-	</script>
-
-<style type="text/css">
-<!--
+  <style type="text/css">
+    <!--
     .about-description.fixed-background.bg-about:before {
       background-image: url(https://68.media.tumblr.com/bc7f1f13b4c1fa2efd4307d1b1701926/tumblr_p4nwdj34ou1x2nz8ro1_1280.jpg);
     }
 
-    .about-description.fixed-background.bg-schadule:before {
+    .about-description.fixed-background.bg-schedule:before {
       background-image: url(https://78.media.tumblr.com/a79e12b29d0a085a97d621c196e0fabf/tumblr_p4nw7t47Tw1x2nz8ro1_1280.jpg);
     }
 
@@ -69,28 +73,29 @@
       background-image: url(https://78.media.tumblr.com/b43dd06e0600cffc3d2e3d4355b9eb2a/tumblr_p4nw7t47Tw1x2nz8ro2_1280.jpg);
     }
 
--->
-</style>
+    -->
+  </style>
 
 </head>
-<body id="top">
 
+<body>
 
-  <header class="header" >
-    <dev class="wrap">
+  <header class="header">
+    <dev class="container">
       <ul class="header-menu">
         <li class="header-menu__item"><a href="#about">about</a></li>
         <li class="header-menu__item"><a href="#info">info</a></li>
-        <li class="header-menu__item"><a href="#schadule">schadule</a></li>
+        <li class="header-menu__item"><a href="#schedule">schedule</a></li>
         <li class="header-menu__item"><a href="#discography">discography</a></li>
         <li class="header-menu__item"><a href="#contact">contact</a></li>
       </ul>
     </dev>
   </header>
 
-  <div></div>
+
+    {block:HomePage}
     <article class="about-area">
-      <div class="wrap">
+      <div class="container">
         <section class="logo">
           <h1 class="logo__text glitch" data-text="MORTAL FAMILY">
             <a href="#about">MORTAL FAMILY</a>
@@ -98,11 +103,8 @@
         </section>
 
         <section class="about-description fixed-background" id="about">
-          <div class="about-description__text" id="about" >
-            <p >Scrap and build and more scrap.<br>
-                Disturbing, but cozy iteration and improvisation.<br>
-                Nothing is permanent.<br>
-                Nothing is same moment.</p>
+          <div class="about-description__text" id="about">
+            <p>Scrap and build and more scrap.<br> Disturbing, but cozy iteration and improvisation.<br> Nothing is permanent.<br> Nothing is same moment.</p>
             <dl class="about-description__member">
               <dt>Drums/Vocal.</dt>
               <dd>Shinya</dd>
@@ -122,40 +124,40 @@
     </article>
 
     <article class="info-area" id="info">
-        <h2 class="title">INFO</h2>
-        <ul class="posts-list posts-list_tags_info">
-          {block:Posts}
-            <li class="{TagsAsClasses} effect-move">
-              <a href="{Permalink}">
-                <div class="info-date-tags">
-                  {block:Date}<time class="posts-list__date">{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}</time>{/block:Date}
-                  {block:HasTags}{block:Tags}<span class="posts-list__tags">#{Tag}</span>{/block:Tags}{/block:HasTags}
-                </div>
-                {block:Text}{block:Title}<p class="posts-list__title">{Title}</p>{/block:Title}{/block:Text}
-              </a>
-            </li>
-          {/block:Posts}
-        </ul>
+      <h2 class="title">INFO</h2>
+      <ul class="posts-list posts-list_tags_info">
+        {block:Posts}
+        <li class="{TagsAsClasses} effect-move">
+          <a href="{Permalink}">
+            <div class="info-date-tags">
+              {block:Date}<time class="posts-list__date">{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}</time>{/block:Date} {block:HasTags}{block:Tags}
+              <span class="posts-list__tags fa-fw"><i class="fas fa-tag"></i>{Tag}</span>{/block:Tags}{/block:HasTags}
+            </div>
+            {block:Text}{block:Title}
+            <p class="posts-list__title">{Title}</p>{/block:Title}{/block:Text}
+          </a>
+        </li>
+        {/block:Posts}
+      </ul>
     </article>
 
-    <article class="schadule-area fixed-background" id="schadule">
-      <h2 class="title">SCHADULE</h2>
-      <div class="wrap">
-        <ul class="posts-list posts-list_tags_schadule">
+    <article class="schedule-area fixed-background" id="schedule">
+      <h2 class="title">schedule</h2>
+      <div class="container">
+        <ul class="posts-list posts-list_tags_schedule">
           {block:Posts}
-            <li class="{TagsAsClasses} effect-move">
-              {block:Text}
-                {block:Title}<p class="posts-list__title">{Title}</p>{/block:Title}
-                <div class="inner clearfix">
-                  {block:Body}{Body}{/block:Body}
-                </div>
-              {/block:Text}
-              <p class="posts-list__tags">
-                {block:HasTags}
-                  {block:Tags} #{Tag}{/block:Tags}
-                {/block:HasTags}
-              </p>
-           </li>
+          <li class="{TagsAsClasses} effect-move">
+            {block:Text} {block:Title}
+            <p class="posts-list__title">{Title}</p>{/block:Title}
+            <div class="inner clearfix">
+              {block:Body}{Body}{/block:Body}
+            </div>
+            {/block:Text}
+            <p class="posts-list__tags">
+              {block:HasTags} {block:Tags}
+              <i class="fas fa-tag fa-fw"></i>{Tag}{/block:Tags} {/block:HasTags}
+            </p>
+          </li>
           {/block:Posts}
         </ul>
       </div>
@@ -163,11 +165,11 @@
 
     <article class="discography-area" id="discography">
       <h2 class="title">DISCOGRAPHY</h2>
-      <div class="wrap">
+      <div class="container">
         <ul class="posts-list posts-list_tags_discography">
           <li class="discography effect-move">
             <div class="posts-list__img">
-              <a href="https://68.media.tumblr.com/5e92b7918a3ee04a19441583b7b47862/tumblr_p4tkotXmKM1x2nz8ro1_1280.jpg">
+              <a href="https://68.media.tumblr.com/5e92b7918a3ee04a19441583b7b47862/tumblr_p4tkotXmKM1x2nz8ro1_1280.jpg" rel="lightbox">
                 <img src="https://68.media.tumblr.com/5e92b7918a3ee04a19441583b7b47862/tumblr_p4tkotXmKM1x2nz8ro1_1280.jpg" alt="HAMON" >
               </a>
             </div>
@@ -194,10 +196,10 @@
 
     </article>
 
-<!--
+    <!--
     <article class="discography-area" id="discography">
       <h2 class="title">DISCOGRAPHY</h2>
-      <div class="wrap">
+      <div class="container">
         <ul class="posts-list posts-list_tags_discography">
           {block:Posts}
             <li class="{TagsAsClasses} effect-move">
@@ -221,28 +223,31 @@
 
     <article class="contact-area fixed-background" id="contact">
       <h2 class="title">CONTACT</h2>
-      <div class="wrap">
+      <div class="container">
         <form class="contact-form" action="//app.lisket.jp/form_maker/message/11577" method="post">
-      		<dl class="mailform effect-move">
-      			<dt><label for="data_name">NAME</label></dt>
-      				<dd><input type="text" name="data[name]" id="data_name" placeholder="Please Enter Your Name" required></dd>
-      			<dt><label for="data_mail">E-MAIL ADDRESS</label></dt>
-      				<dd><input type="email" name="data[mail]" id="data_mail" placeholder="Please Enter Your E-mail Address" required></dd>
-      			<dt><label for="data_field_2">MESSAGE</label></dt>
-      				<dd><textarea name="data[field_2]" id="data_field_2" placeholder="Please Enter Your Message" required></textarea></dd>
+          <dl class="mailform effect-move">
+            <dt><label for="data_name">NAME</label></dt>
+            <dd><input type="text" name="data[name]" id="data_name" placeholder="Please Enter Your Name" required></dd>
+            <dt><label for="data_mail">E-MAIL ADDRESS</label></dt>
+            <dd><input type="email" name="data[mail]" id="data_mail" placeholder="Please Enter Your E-mail Address" required></dd>
+            <dt><label for="data_field_2">MESSAGE</label></dt>
+            <dd><textarea name="data[field_2]" id="data_field_2" placeholder="Please Enter Your Message" required></textarea></dd>
             <dt style="display: none"></dt>
-      				<dd style="display: none"><input type="hidden" id="data_verification_code" name="data[verification_code]" value="ebf103da9101c532122942e326df9debd3575684" /></dd>
-      		</dl>
-      		<p class="send-btn effect-move">
+            <dd style="display: none"><input type="hidden" id="data_verification_code" name="data[verification_code]" value="ebf103da9101c532122942e326df9debd3575684" /></dd>
+          </dl>
+          <p class="send-btn effect-move">
             <input type="submit" class="button" value="SEND">
           </p>
-    	</form>
+        </form>
       </div>
     </article>
+    {/block:HomePage}
 
+  </div>
   <footer class="footer">
-    <a href="#top"><img src="https://static.tumblr.com/zueaxxn/RNNp4vf1x/arrowtop.png" class="top-link"></a>
+    <p class="top-link"><a href="#"><i class="fas fa-caret-up"></i></a></p>
     <p class="copyright">Copyright © MORTAL FAMILY All right reserved.</p>
   </footer>
 </body>
+
 </html>
