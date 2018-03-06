@@ -12,23 +12,6 @@
 /* -----------------------------------------------------------
 @Wrapper
 ----------------------------------------------------------- */
-.wrapper::before {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 10% 0;
-  content: "";
-  z-index: -10;
-}
 
 
 
@@ -43,6 +26,7 @@
   left: 0;
   right: 0;
   height: auto;
+  text-align: left;
 }
 
 @media screen and (max-width: 600px) {
@@ -63,7 +47,6 @@
   .container {
     width: 1280px;
     margin: 0 auto;
-    text-align: left;
   }
 }
 
@@ -87,9 +70,9 @@
 .posts-list>li {
   position: relative;
   width: 46%;
-  padding: 1%;
+  padding: 1% 1% 1.4rem 1%;
   margin: 1%;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   overflow: hidden;
   display: none;
 }
@@ -129,6 +112,10 @@
   position: absolute;
   bottom: 0;
   text-align: left;
+}
+
+.posts-list__tags a{
+  color: #009ea9;
 }
 
 @media only screen and (max-width: 600px) {
@@ -601,7 +588,7 @@
   overflow: unset;
 }
 
-.info>a {
+.info-area a {
   height: auto;
   padding: 1rem;
   text-align: left;
@@ -609,7 +596,7 @@
   overflow: hidden;
 }
 
-.info>a:hover {
+.info-area a:hover {
   box-shadow: 0px 0px 5px 0px rgba(30, 30, 30, 0.7);
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 1.2rem;
@@ -618,6 +605,7 @@
   -o-transition: all 1s ease;
   transition: all 1s ease;
 }
+
 
 .posts-list .posts-list__date {
   text-align: left;
@@ -659,10 +647,6 @@
   display: inline;
 }
 
-.posts-list.posts-list_tags_schedule {
-  color: #009ea9;
-}
-
 .posts-list_tags_schedule>li {
   background-color: rgba(255, 255, 255, 0.6);
 }
@@ -678,6 +662,7 @@
 .posts-list_tags_schedule .posts-list__img {
   float: right;
 }
+
 
 /* -----------------------------------------------------------
 @Discography
@@ -699,10 +684,6 @@
 
 .posts-list_tags_discography>.discography {
   display: block;
-}
-
-.posts-list.posts-list_tags_discography {
-  color: #009ea9;
 }
 
 .posts-list_tags_discography .posts-list__title {
@@ -877,6 +858,9 @@
 /* -----------------------------------------------------------
 @IndexPage
 ----------------------------------------------------------- */
+
+
+
 .index-area {
   height: auto;
   min-height: 100vh;
@@ -894,14 +878,14 @@
   display: block;
 }
 
-.posts-list_tags_index>li:hover {
+/* .posts-list_tags_index>li:hover {
   box-shadow: 0px 0px 5px 0px rgba(30, 30, 30, 0.7);
   border-radius: 1.2rem;
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
   transition: all 1s ease;
-}
+} */
 
 .posts-list_tags_index .posts-list__title {
   color: #d20661;
@@ -912,9 +896,32 @@
   float: right;
 }
 
-.posts-list__tags {
-  color: #009ea9;
+.pagination {
+  background-color: rgba(255, 255, 255, 0.6);
+  text-align: center;
 }
+
+
+.pagination a:link {
+  color: #555;
+  text-decoration: none
+}
+
+.pagination a:visited {
+  color: #555;
+  text-decoration: none
+}
+
+.pagination a:hover {
+  color: #555;
+  text-decoration: none
+}
+
+.pagination a:active {
+  color: #555;
+  text-decoration: none
+}
+
 
 /* -----------------------------------------------------------
 @Footer
