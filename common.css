@@ -151,13 +151,6 @@ body {
   }
 }
 
-/* .fixed-background {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center center;
-} */
-
 .fixed-background::before {
   background-position: center center;
   background-repeat: no-repeat;
@@ -198,7 +191,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, .4);
   border-radius: 8px;
   box-shadow: 0 0 0 1px rgba(200, 200, 200, .4);
 }

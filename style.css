@@ -3,11 +3,6 @@
 @import url('https://fonts.googleapis.com/css?family=Anton');
 @import url('https://fonts.googleapis.com/css?family=Maven+Pro');
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Raleway:400,600i');
-@media screen and (max-width: 600px) {}
-
-@media screen and (max-width: 1280px) and (min-width:601px) {}
-
-@media screen and (min-width: 1281px) {}
 
 /* -----------------------------------------------------------
 @Wrapper
@@ -90,6 +85,8 @@
 .posts-list ul {
   margin-bottom: 1rem;
   list-style-type: none;
+  font-size: 1rem;
+  line-height: 1.2rem;
 }
 
 .posts-list p {
@@ -261,11 +258,8 @@
 .about-area__border {
   position: absolute;
   background: linear-gradient(#000, rgba(0, 0, 0, 0));
-  /*(#05FBFF, #1E00FF)*/
-  ;
   width: 100%;
   height: 25vw;
-  /* padding: 0 0 33.3vh; */
   top: 66.6vh;
   z-index: 1;
 }
@@ -316,7 +310,6 @@
 }
 
 .logo__text {
-  /* background: #000; */
   width: auto;
   font-family: 'Anton', sans-serif;
   font-size: 17.3%;
@@ -487,21 +480,10 @@
 }
 
 .about-description {
-  /* background: #FFF no-repeat; */
-  /* background-size: 95% auto; */
   height: auto;
   min-height: 100vh;
-  /* background-attachment: fixed; */
-  /* background-image: url(image/prof22.jpg); */
   background-position: center 50%;
 }
-
-/* @media screen and (min-width: 1281px) {
-  .about-description {
-    background-size: 90% auto;
-    background-position: center 20%;
-  }
-} */
 
 .about-description.fixed-background.bg-about:before {
   width: 100vw;
@@ -519,7 +501,6 @@
 }
 
 .about-description__text {
-  /* font-family: 'Raleway', sans-serif; */
   position: sticky;
   margin-top: calc(100vh - 33.3vh - 17.3vw);
   width: 100%;
@@ -541,7 +522,6 @@
 }
 
 .about-description__member {
-  /* font-family: 'Raleway', sans-serif; */
   text-align: center;
   margin: 0% 30% 10% 30%;
 }
@@ -750,9 +730,10 @@
 
 .contact-area {
   height: auto;
-  min-height: 100vh;
+  min-height: 90vh;
   width: 100%;
   padding-top: 7rem;
+  padding-bottom: 3rem;
   text-align: center;
 }
 
@@ -858,9 +839,6 @@
 /* -----------------------------------------------------------
 @IndexPage
 ----------------------------------------------------------- */
-
-
-
 .index-area {
   height: auto;
   min-height: 100vh;
@@ -878,15 +856,6 @@
   display: block;
 }
 
-/* .posts-list_tags_index>li:hover {
-  box-shadow: 0px 0px 5px 0px rgba(30, 30, 30, 0.7);
-  border-radius: 1.2rem;
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  transition: all 1s ease;
-} */
-
 .posts-list_tags_index .posts-list__title {
   color: #d20661;
 }
@@ -900,7 +869,6 @@
   background-color: rgba(255, 255, 255, 0.6);
   text-align: center;
 }
-
 
 .pagination a:link {
   color: #555;
@@ -922,6 +890,38 @@
   text-decoration: none
 }
 
+/* -----------------------------------------------------------
+@Permalink
+----------------------------------------------------------- */
+.posts-list.posts-list_tags_Permalink {
+  color: #dc2c32;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.posts-list_tags_Permalink>li {
+  background-color: rgba(255, 255, 255, 0.6);
+  display: block;
+  width: 80%;
+  padding: 1% 3% 1.4rem 3%;
+  margin: 1%;
+  margin-bottom: 1rem;
+}
+
+.posts-list_tags_Permalink .posts-list__title {
+  text-align: center;
+  color: #d20661;
+}
+
+.posts-list_tags_Permalink .posts-list__img {
+  float: right;
+}
+
+@media only screen and (max-width: 600px) {
+  .posts-list_tags_Permalink>li {
+    width: 96%;
+  }
+}
 
 /* -----------------------------------------------------------
 @Footer

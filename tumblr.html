@@ -2,17 +2,30 @@
 <html>
 
 <head>
-
+	<meta charset=utf-8>
+  <meta name="keywords" content="mortalfamily,mortal,family,モータルファミリー,モータル,">
+  <title>MORTAL FAMILY WEB SITE</title>
+  <meta property="og:title" content="MORTAL FAMILY WEB SITE">
+	<meta property="og:image" content="https://68.media.tumblr.com/5e92b7918a3ee04a19441583b7b47862/tumblr_p4tkotXmKM1x2nz8ro1_1280.jpg">
+	<meta property="og:url" content="https://mortalfamily.tumblr.com/">
+  <meta property="og:description" content="ハードコアバンドMORTAR FAMILY（モータルファミリー）のオフィシャルWEBサイト。2018年4月11日AMAZING MADNESS RECORDSより2ndミニアルバム『HAMON』リリース。">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@mortalfamily">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link href="https://static.tumblr.com/zueaxxn/Fh7p4x9i5/common.css" rel="stylesheet">
-  <link href="https://static.tumblr.com/zueaxxn/zIrp56i2v/style.css" rel="stylesheet">
+
+  <link rel="apple-touch-icon" href="{PortraitURL-128}">
+  <link rel="shortcut icon" href="{Favicon}">
+  <link rel="canonical" href="{block:IndexPage}{BlogURL}{/block:IndexPage}{block:PermalinkPage}{Permalink}{/block:PermalinkPage}">
+  <link rel="alternate" type="application/rss+xml" href="{RSS}">
+
+  <link href="https://static.tumblr.com/zueaxxn/Oldp58cs0/common.css" rel="stylesheet">
+  <link href="https://static.tumblr.com/zueaxxn/izhp58crw/style.css" rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="https://static.tumblr.com/zueaxxn/CKcp4x1gn/lightbox.css">
   <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.0.min.js"></script> -->
   <script src="//static.tumblr.com/4ryjdsi/N6Bnr9dhx/jquery-1.11.3.min.js"></script>
   <script src="https://static.tumblr.com/zueaxxn/pugp4x1hs/lightbox.js" type="text/javascript"></script>
   <script type="text/javascript" src="//app.lisket.jp/bundles/lisketformmaker/js/form.js" charset="utf-8"></script>
-
 
   <script type="text/javascript">
     $(function() {
@@ -74,9 +87,25 @@
     }
 
     .wrapper.fixed-background:before {
-     background-image: url('https://78.media.tumblr.com/a79e12b29d0a085a97d621c196e0fabf/tumblr_p4nw7t47Tw1x2nz8ro1_1280.jpg');
-   }
-   -->
+      background-image: url('https://78.media.tumblr.com/a79e12b29d0a085a97d621c196e0fabf/tumblr_p4nw7t47Tw1x2nz8ro1_1280.jpg');
+    }
+
+    .lb-nav a.lb-prev {
+      background: url(https://static.tumblr.com/zueaxxn/HUzp58coz/prev.png) left 48% no-repeat;
+    }
+
+    .lb-nav a.lb-next {
+      background: url(https://static.tumblr.com/zueaxxn/bNyp58cp9/next.png) right 48% no-repeat;
+    }
+
+    .lb-data .lb-close {
+      background: url(https://static.tumblr.com/zueaxxn/Gvlp58cpq/close.png) top right no-repeat;
+    }
+
+    .lb-cancel {
+      background: url(https://static.tumblr.com/zueaxxn/BiWp58cr2/loading.gif) no-repeat;
+    }
+    -->
   </style>
 
 </head>
@@ -87,19 +116,30 @@
   <header class="header">
     <dev class="container">
       <ul class="header-menu">
-        <li class="header-menu__item">{block:HomePage}<a href="#about"> <!--{/block:HomePage}<a href="https://mortalfamily.tumblr.com/#about">{block:HomePage}-->{/block:HomePage}about</a></li>
-        <li class="header-menu__item">{block:HomePage}<a href="#info"> <!--{/block:HomePage}<a href="https://mortalfamily.tumblr.com/#info">{block:HomePage}-->{/block:HomePage}info</a></li>
-        <li class="header-menu__item">{block:HomePage}<a href="#schedule"> <!--{/block:HomePage}<a href="https://mortalfamily.tumblr.com/#schedule">{block:HomePage}-->{/block:HomePage}schedule</a></li>
-        <li class="header-menu__item">{block:HomePage}<a href="#discography"> <!--{/block:HomePage}<a href="https://mortalfamily.tumblr.com/#discography">{block:HomePage}-->{/block:HomePage}discography</a></li>
-        <li class="header-menu__item">{block:HomePage}<a href="#contact"> <!--{/block:HomePage}<a href="https://mortalfamily.tumblr.com/#contact">{block:HomePage}-->{/block:HomePage}contact</a></li>
+        <li class="header-menu__item">{block:HomePage}
+          <a href="#about">
+            <!--{/block:HomePage}<a href="https://mortalfamily.tumblr.com/#about">{block:HomePage}-->{/block:HomePage}about</a>
+        </li>
+        <li class="header-menu__item">{block:HomePage}
+          <a href="#info">
+            <!--{/block:HomePage}<a href="https://mortalfamily.tumblr.com/#info">{block:HomePage}-->{/block:HomePage}info</a>
+        </li>
+        <li class="header-menu__item">{block:HomePage}
+          <a href="#schedule">
+            <!--{/block:HomePage}<a href="https://mortalfamily.tumblr.com/#schedule">{block:HomePage}-->{/block:HomePage}schedule</a>
+        </li>
+        <li class="header-menu__item">{block:HomePage}
+          <a href="#discography">
+            <!--{/block:HomePage}<a href="https://mortalfamily.tumblr.com/#discography">{block:HomePage}-->{/block:HomePage}discography</a>
+        </li>
+        <li class="header-menu__item">{block:HomePage}
+          <a href="#contact">
+            <!--{/block:HomePage}<a href="https://mortalfamily.tumblr.com/#contact">{block:HomePage}-->{/block:HomePage}contact</a>
+        </li>
       </ul>
     </dev>
   </header>
 
-
-<!--
-  @TopPage
--->
 
   {block:HomePage}
   <article class="about-area">
@@ -155,17 +195,17 @@
       <ul class="posts-list posts-list_tags_schedule">
         {block:Posts}
         <li class="{TagsAsClasses} effect-move">
-          {block:Text}
-            {block:Title}
-            <a href="{Permalink}"><p class="posts-list__title">{Title}</p></a>{/block:Title}
-            <div class="inner clearfix">
-              {block:Body}{Body}{/block:Body}
-            </div>
+          {block:Text} {block:Title}
+          <a href="{Permalink}">
+            <p class="posts-list__title">{Title}</p>
+          </a>{/block:Title}
+          <div class="inner clearfix">
+            {block:Body}{Body}{/block:Body}
+          </div>
           {/block:Text}
           <p class="posts-list__tags">
             {block:HasTags} {block:Tags}
-              <a href="{TagURL}"><i class="fas fa-tag fa-fw"></i>{Tag}</a>
-            {/block:Tags} {/block:HasTags}
+            <a href="{TagURL}"><i class="fas fa-tag fa-fw"></i>{Tag}</a> {/block:Tags} {/block:HasTags}
           </p>
         </li>
         {/block:Posts}
@@ -187,10 +227,10 @@
             <h3 class="posts-list__title">HAMON</h3>
             <div class="song-list">
               <ul>
-                <li>01.JESUS</li>
-                <li>02.トラウマ</li>
-                <li>03.oh my GOD</li>
-                <li>04.HAMON</li>
+                <li>01. JESUS</li>
+                <li>02. トラウマ</li>
+                <li>03. oh my GOD</li>
+                <li>04. HAMON</li>
               </ul>
             </div>
             <div class="disc-info">
@@ -226,24 +266,22 @@
       </form>
     </div>
   </article>
-  {/block:HomePage}
 
-
-
-  {block:HomePage}
+  {/block:HomePage} {block:HomePage}
   <!--{/block:HomePage}
 
   <div class="wrapper fixed-background">
 
-
     <article class="index-area" >
-      <h2 class="title">
-      {block:DayPage}{block:Date}{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}{/block:Date}{/block:DayPage}
-      {block:TagPage}{Tag}{/block:TagPage}
-      {block:SearchPage}{SearchQuery}{/block:SearchPage}
-      </h2>
+      {block:IndexPage}
+        <h2 class="title">
+          {block:DayPage}{block:Date}{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}{/block:Date}{/block:DayPage}
+          {block:TagPage}{Tag}{/block:TagPage}
+          {block:SearchPage}{SearchQuery}{/block:SearchPage}
+        </h2>
+      {/block:IndexPage}
       <div class="container">
-        <ul class="posts-list posts-list_tags_index">
+        <ul class="posts-list {block:IndexPage}posts-list_tags_index{/block:IndexPage} {block:PermalinkPage}posts-list_tags_Permalink{/block:PermalinkPage} ">
           {block:Posts}
           <li class="{TagsAsClasses} effect-move">
 
@@ -253,7 +291,6 @@
                 {block:Body}{Body}{/block:Body}
               </div>
             {/block:Text}
-
 
             <p class="posts-list__tags">
               {block:HasTags} {block:Tags}
@@ -279,11 +316,6 @@
 
       </div>
     </article>
-
-
-
-
-
 
   </div>
   {block:HomePage}-->{/block:HomePage}
