@@ -175,7 +175,7 @@
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 0 1rem;
+  padding: 0 2rem 0 1rem;
   width: auto;
 }
 
@@ -285,7 +285,6 @@
 .logo {
   height: auto;
   width: auto;
-  position: sticky;
   margin-top: 33.3vh;
   overflow: hidden;
   z-index: 50;
@@ -312,7 +311,7 @@
 .logo__text {
   width: auto;
   font-family: 'Anton', sans-serif;
-  font-size: 17.3%;
+  font-size: 16.3%;
   text-transform: uppercase;
   color: #fff;
   position: relative;
@@ -320,6 +319,36 @@
   left: -1.3%;
   white-space: nowrap;
 }
+
+@media screen and (-webkit-min-device-pixel-ratio:0){
+  .logo__text {
+    font-size: 17.12%;
+  }
+}
+
+_:-ms-lang(x)::backdrop, .logo__text {
+  font-size: 16.3%;
+}
+
+@media screen and (min-width: 1281px) {
+  .logo__text {
+    font-size: 213px;
+  }
+}
+
+@media screen and (min-width: 1281px) and (-webkit-min-device-pixel-ratio:0) {
+  .logo__text {
+    font-size: 221px;
+  }
+}
+
+@media screen and (min-width: 1281px) {
+  _:-ms-lang(x)::backdrop, .logo__text {
+    font-size: 213px;
+  }
+}
+
+
 
 @keyframes noise-anim {
   0% {
@@ -501,7 +530,6 @@
 }
 
 .about-description__text {
-  position: sticky;
   margin-top: calc(100vh - 33.3vh - 17.3vw);
   width: 100%;
   height: auto;

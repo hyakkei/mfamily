@@ -176,6 +176,31 @@ body {
   transition: 1.0s;
 }
 
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+@media all and (-ms-high-contrast:none){
+  .sticky {
+    position:relative;
+  }
+}
+
+@media all and (-ms-high-contrast:none){
+  *::-ms-backdrop,
+  .sticky {
+    position:relative;
+  }
+}
+
+@supports (-ms-ime-align:auto) {
+.sticky {
+    position:relative;
+  }
+}
+
 /* -----------------------------------------------------------
 @Scroll bar
 ----------------------------------------------------------- */
